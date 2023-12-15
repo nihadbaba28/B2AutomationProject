@@ -34,7 +34,7 @@ public class T6_dropdown_without_select {
         WebElement login = driver.findElement(By.xpath("//button[@type='submit']"));
 
         userName.sendKeys(DocuportConstants.USERNAME_FOR_ADVISOR);
-        password.sendKeys(DocuportConstants.PASSWORD_ADVISOR);
+  //      password.sendKeys(DocuportConstants.PASSWORD_ADVISOR);
 
         login.click();
         WebElement receivedDocuments = driver.findElement(By.xpath("//span[.='Received docs']"));
