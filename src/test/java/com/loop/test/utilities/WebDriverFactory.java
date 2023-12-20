@@ -10,7 +10,7 @@ public class WebDriverFactory {
     /**
      * @parameter will be browserType
      * @return will be WebDriver
-     * @author Ahmad
+     * @author Nihad
      */
     public static WebDriver getDriver(String browserType) {
         if (browserType.equalsIgnoreCase("chrome")) {
