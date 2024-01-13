@@ -1,12 +1,9 @@
 package com.loop.test.day7_windows;
 
 import com.loop.test.base.TestBase;
-import com.loop.test.utilities.BrowserUtils;
+import com.loop.test.utilities.BrowserUtilities;
 import org.openqa.selenium.JavascriptExecutor;
 import org.testng.annotations.Test;
-
-import java.sql.Array;
-import java.util.Set;
 
 /*
     1. Create new test and make set ups
@@ -37,7 +34,7 @@ public class T2_windows extends TestBase {
 //            if (driver.getCurrentUrl().toLowerCase().contains("etsy")) {
 //                break;
 //            }
-        BrowserUtils.switchWindowAndValidate(driver,"amazon.com","amazon");
+        BrowserUtilities.switchWindowAndValidate(driver,"amazon.com","amazon");
 
         }
 
