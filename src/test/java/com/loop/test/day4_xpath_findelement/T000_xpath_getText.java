@@ -13,7 +13,7 @@ public class T000_xpath_getText {
         WebElement forgetPasswordBottom = driver.findElement(By.xpath("//a[contains(text(),'Forgot password')]"));
         forgetPasswordBottom.click();
         String actualURL = driver.getCurrentUrl();
-        if (actualURL.contains(DocuportConstants.RESET_PASSWORD_URL)){
+        if (actualURL.contains(DocuportConstants.EXPECTED_RESET_PASSWORD_TEXT_DOCUPORT)){
           System.out.println("TEST PASSED");
         }else {
           System.out.println("TEST FAILED");
@@ -25,7 +25,7 @@ public class T000_xpath_getText {
         writeMailBottom.sendKeys(DocuportConstants.EMAIL_FOR_RESET_PASSWORD_DOCUPORT);
         WebElement enterTheEmailText = driver.findElement(By.xpath("//div[contains(text(),'Enter the email address associated with your account')]"));
         String actualTextEnterMail = enterTheEmailText.getText();
-        if (actualTextEnterMail.equalsIgnoreCase(DocuportConstants.RESET_PASSWORD_MESSAGE)){
+        if (actualTextEnterMail.equalsIgnoreCase(DocuportConstants.EXPECTED_RESET_PASSWORD_TEXT_DOCUPORT)){
           System.out.println("TEST PASSED");
         }else {
           System.out.println("TEST FAILED");
