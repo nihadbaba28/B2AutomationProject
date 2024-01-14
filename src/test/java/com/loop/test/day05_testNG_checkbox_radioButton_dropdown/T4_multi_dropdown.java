@@ -40,7 +40,7 @@ public class T4_multi_dropdown {
         }
         options.forEach(each ->
             System.out.println(each.getText()));
-        dropdown.deselectAll();
+        //dropdown.deselectAll();
 
 
     }}
