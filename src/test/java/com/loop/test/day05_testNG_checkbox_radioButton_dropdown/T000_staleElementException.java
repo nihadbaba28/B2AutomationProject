@@ -1,6 +1,6 @@
 package com.loop.test.day05_testNG_checkbox_radioButton_dropdown;
 
-import com.loop.test.utilities.Driver;
+//import com.loop.test.utilities.Driver;
 import com.loop.test.utilities.WebDriverFactory;
 import org.openqa.selenium.By;
 import org.openqa.selenium.StaleElementReferenceException;

@@ -30,7 +30,7 @@ public class BrowserUtilities {
                 break;
             }
         }
-        Assert.assertTrue(driver.getTitle().toLowerCase().contains(expectedURL));
+        Assert.assertTrue(driver.getTitle().toLowerCase().contains(expectedTitle));
     }
     /**
      * switches to the new window by the exact title
