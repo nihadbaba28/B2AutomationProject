@@ -28,9 +28,10 @@ public class BrowserUtilities {
             driver.switchTo().window(each);
             if (driver.getCurrentUrl().toLowerCase().contains(expectedURL)) {
                 break;
+
             }
         }
-        Assert.assertTrue(driver.getTitle().toLowerCase().contains(expectedURL));
+        Assert.assertTrue(driver.getTitle().toLowerCase().contains(expectedTitle));
     }
     /**
      * switches to the new window by the exact title
@@ -44,6 +45,7 @@ public class BrowserUtilities {
             driver.switchTo().window(each);
             if (driver.getTitle().contains(targetTitle)) {
                 return;
+
             }
         }
         driver.switchTo().window(origin);

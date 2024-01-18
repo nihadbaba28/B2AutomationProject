@@ -15,18 +15,20 @@ public class DocuportUtilities {
      * @author Nihad
      */
     public static void login(WebDriver driver, String role) throws InterruptedException {
-        //driver.get("https://beta.docuport.app/");
-        Driver.getDriver().get(ConfigurationReader.getProperty("env"));
-        WebElement username = Driver.getDriver().findElement(By.xpath("//label[contains(text(),'Username or email')]//following-sibling::input"));
-        WebElement password = Driver.getDriver().findElement(By.xpath("//label[contains(text(),'Password')]//following-sibling::input"));
-        WebElement loginButton = Driver.getDriver().findElement(By.xpath("//button[@type='submit']"));
+        driver.get("https://beta.docuport.app/");
+      //  Driver.getDriver().get(ConfigurationReader.getProperty("env"));
+        WebElement username = driver.findElement(By.xpath("//label[contains(text(),'Username or email')]//following-sibling::input"));
+        WebElement password = driver.findElement(By.xpath("//label[contains(text(),'Password')]//following-sibling::input"));
+        WebElement loginButton = driver.findElement(By.xpath("//button[@type='submit']"));
         switch(role.toLowerCase()) {
             case "advisor":
                 username.sendKeys(DocuportConstants.USERNAME_FOR_ADVISOR);
                 password.sendKeys(DocuportConstants.PASSWORD_FOR_LOGIN);
                 break;
             case "client":
-                username.sendKeys(DocuportConstants.USERNAME_FOR_CLIENT);
+
+               username.sendKeys(DocuportConstants.USERNAME_FOR_CLIENT);
+
                 password.sendKeys(DocuportConstants.PASSWORD_FOR_LOGIN);
                 break;
             case "employee":
@@ -42,7 +44,7 @@ public class DocuportUtilities {
         loginButton.click();
         Thread.sleep(2000);
         if (role.equalsIgnoreCase("client")) {
-            WebElement continueButton = Driver.getDriver().findElement(By.xpath("//button[@type='submit']"));
+            WebElement continueButton = driver.findElement(By.xpath("//button[@type='submit']"));
             continueButton.click();
         }
     }
@@ -53,9 +55,10 @@ public class DocuportUtilities {
      * @author Nihad
      */
     public static void logout(WebDriver driver) {
-        WebElement userIcon = Driver.getDriver().findElement(By.xpath("//div[@class='v-avatar primary']"));
+       driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+        WebElement userIcon = driver.findElement(By.xpath("//div[@class='v-avatar primary']"));
         userIcon.click();
-        WebElement logOutButton = Driver.getDriver().findElement(By.xpath("//span[contains(text(),'Log out')]"));
+        WebElement logOutButton = driver.findElement(By.xpath("//span[contains(text(),'Log out')]"));
         logOutButton.click();
     }
 }
