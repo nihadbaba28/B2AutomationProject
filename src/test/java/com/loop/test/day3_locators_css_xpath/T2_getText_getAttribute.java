@@ -26,6 +26,8 @@ public class T2_getText_getAttribute {
         }
         WebElement placeHolderForUsername = driver.findElement(By.name("username"));
         String actualAttributeForPlaceHolder = placeHolderForUsername.getAttribute("placeholder");
+        placeHolderForUsername.getAttribute("Nihad");
+        System.out.println(actualAttributeForPlaceHolder);
       if (actualAttributeForPlaceHolder.equalsIgnoreCase(LoopCampConstants.EXPECTED_PLACEHOLDER_USERNAME)){
           System.out.println("TEST PASSED");
       }else {

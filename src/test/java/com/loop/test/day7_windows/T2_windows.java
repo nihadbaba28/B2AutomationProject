@@ -5,6 +5,8 @@ import com.loop.test.utilities.BrowserUtilities;
 import org.openqa.selenium.JavascriptExecutor;
 import org.testng.annotations.Test;
 
+import java.util.Set;
+
 /*
     1. Create new test and make set ups
     2. Go to : https://www.amazon.com
@@ -27,14 +29,19 @@ public class T2_windows extends TestBase {
         ((JavascriptExecutor) driver).executeScript("window.open('http://google.com','_blank');");
         ((JavascriptExecutor) driver).executeScript("window.open('http://etsy.com','_blank');");
         ((JavascriptExecutor) driver).executeScript("window.open('http://facebook.com','_blank');");
+
 //        Set<String> windowHandles = driver.getWindowHandles();
-//        for (String window : windowHandles) {
-//            driver.switchTo().window(window);
-//            System.out.println("driver.getCurrentUrl() = " + driver.getCurrentUrl());
-//            if (driver.getCurrentUrl().toLowerCase().contains("etsy")) {
+//        for(String eachWindow: windowHandles){
+//            driver.switchTo().window(eachWindow);
+//            System.out.println("Current Url:" + driver.getCurrentUrl());
+//            if(driver.getCurrentUrl().toLowerCase().contains("google")){
 //                break;
 //            }
-        BrowserUtilities.switchWindowAndValidate(driver,"amazon.com","amazon");
+//
+//        }
+        BrowserUtilities.switchWindowAndValidate(driver,"https://www.google.com/","Google");
+
+
 
         }
 
