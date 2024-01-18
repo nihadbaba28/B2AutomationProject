@@ -28,6 +28,7 @@ public class BrowserUtilities {
             driver.switchTo().window(each);
             if (driver.getCurrentUrl().toLowerCase().contains(expectedURL)) {
                 break;
+
             }
         }
         Assert.assertTrue(driver.getTitle().toLowerCase().contains(expectedTitle));
