@@ -45,6 +45,7 @@ public class BrowserUtilities {
             driver.switchTo().window(each);
             if (driver.getTitle().contains(targetTitle)) {
                 return;
+
             }
         }
         driver.switchTo().window(origin);
